@@ -1,0 +1,15 @@
+apiVersion: kpack.io/v1alpha1
+kind: Image
+metadata:
+  name: back-end-python-6cydta5
+  namespace: test-kubeplus-build
+spec:
+  tag: registry.fke.fptcloud.com/f0ffe6e3-a2fd-45aa-9e60-db27b40ee671/back-end-python-6cydta5:latest
+  serviceAccount: 
+  builder:
+    name: back-end-python-6cydta5
+    kind: Builder
+  source:
+    git:
+      url: https://ngocvinhvu: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@github.com/ngocvinhvu/test-kpack.git
+      revision: master

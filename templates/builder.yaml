@@ -1,0 +1,17 @@
+apiVersion: kpack.io/v1alpha1
+kind: Builder
+metadata:
+  name: back-end-python-6cydta5
+  namespace: test-kubeplus-build
+spec:
+  serviceAccount: back-end-python-6cydta5
+  tag: registry.fke.fptcloud.com/f0ffe6e3-a2fd-45aa-9e60-db27b40ee671/back-end-python-6cydta5:latest
+  stack:
+    name: fke-cluster-stack-base
+    kind: ClusterStack
+  store:
+    name: fke-cluster-store
+    kind: ClusterStore
+  order:
+  - group:
+    - id: paketo-buildpacks/python
