@@ -1,3 +1,13 @@
 # Default value for namespace.
 
 greeting: Hello EveryOne!
+
+namespace: test-helm
+tag: registry.fke.fptcloud.com/f0ffe6e3-a2fd-45aa-9e60-db27b40ee671
+
+stack_name: fke-cluster-stack-base
+store_name: fke-cluster-store
+group_id: paketo-buildpacks/python
+
+git_url: https://github.com/ngocvinhvu/test-kpack.git
+git_branch: master

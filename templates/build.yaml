@@ -1,0 +1,29 @@
+apiVersion: kpack.io/v1alpha1
+kind: Builder
+metadata: {{ include "name" . | nindent 2 }}
+spec:
+  serviceAccount: back-end-python
+  tag: {{ .Values.tag }}/{{ .Release.Name }}:latest
+  stack:
+    name: {{ .Values.stack_name }}
+    kind: ClusterStack
+  store:
+    name: {{ .Values.store_name  }}
+    kind: ClusterStore
+  order:
+  - group:
+    - id: {{ .Values.group_id }}
+---
+apiVersion: kpack.io/v1alpha1
+kind: Image
+metadata: {{ include "name" . | nindent 2 }}
+spec:
+  tag: {{ .Values.tag }}/{{ .Release.Name }}:latest
+  serviceAccount: back-end-python
+  builder:
+    name: {{ .Release.Name }}
+    kind: Builder
+  source:
+    git:
+      url: {{ .Values.git_url }}
+      revision: {{ .Values.git_branch }}
