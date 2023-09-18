@@ -1,5 +1,5 @@
 {{/* common labels */}}
 {{- define "name" -}}
 name: {{ .Release.Name }}
-namespace: test-helm
+namespace: default
 {{- end }}
