@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  build-chart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-09-18T09:40:52.871775248+07:00"
+    description: A Helm chart for Kubernetes
+    digest: 303cc6c7c0b85cffa9d4392d5ea4e6192e8d9e54395a53e8c2a4a71697af7cfe
+    name: build-chart
+    type: application
+    urls:
+    - publish/build-chart-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-09-18T09:40:52.848108152+07:00"
